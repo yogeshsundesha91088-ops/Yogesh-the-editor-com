@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yogesh the Editor</title>
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary-color: #2c3e50; /* Dark Blue */
+            --accent-color: #25D366;  /* WhatsApp Green */
+            --light-bg: #f4f4f4;
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--primary-color);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #1ebc57;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 80px 20px;
+            background: var(--light-bg);
+            text-align: center;
+        }
+
+        .pricing h2 {
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+
+        .price-card {
+            background: white;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border: 2px solid var(--primary-color);
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin: 20px 0;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .features li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .features li::before {
+            content: "✓";
+            color: green;
+            position: absolute;
+            left: 0;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about h2 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--primary-color);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            margin-bottom: 10px;
+        }
+        
+        .contact p {
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Yogesh the Editor</div>
+        <div class="nav-links">
+            <a href="#pricing">Pricing</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Polish Your Work to Perfection</h1>
+        <p>Professional editing services for writers, students, and businesses. Clear, concise, and error-free.</p>
+        <a href="#pricing" class="btn">View Pricing</a>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <h2>Simple, Transparent Pricing</h2>
+        <div class="price-card">
+            <h3>Standard Edit</h3>
+            <div class="price">₹100 <span>/ per edit</span></div>
+            <ul class="features">
+                <li>Grammar & Spelling Check</li>
+                <li>Flow & Clarity Improvements</li>
+                <li>Formatting Cleanup</li>
+                <li>24-Hour Turnaround</li>
+                <li>Unlimited Revisions</li>
+            </ul>
+            <a href="https://wa.me/918248798852?text=Hello%20Yogesh,%20I%20want%20to%20hire%20you%20for%20an%20edit." class="btn">Hire Me Now</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Yogesh</h2>
+        <p>
+            Hi, I'm <strong>Yogesh</strong>. I am a professional editor dedicated to helping your words shine. 
+            I specialize in proofreading, copy editing, and content refinement. 
+            Whether you have a blog post, a college assignment, or a business document, 
+            I ensure it is error-free and ready to publish.
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get Started</h2>
+        <p>Click the button below to chat with me directly on WhatsApp.</p>
+        
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/918248798852?text=Hello%20Yogesh,%20I%20need%20an%20edit." class="btn" style="background-color: #25D366;">
+            Chat on WhatsApp
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Yogesh the Editor. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
